@@ -3,8 +3,43 @@ note: value of N is always is even.
 
 i/p:
 havenhelljoysorrow
+4
 
 o/p
 5
 
 have,aven,enhe,oyso,orro
+
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int isvowel(char ch){
+    ch=tolower(ch);
+    return ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u';
+}
+int main()
+{
+    int n,count=0,balance=0;
+    char str[100];
+    scanf("%d\n%s",&n,str);
+    for(int i=0;i<n;i++)
+    {
+        if(isvowel(str[i]))
+            balance++;
+        else
+            balance--;
+    }
+    if(balance==0)
+        count++;
+    for(int i=1;i<=strlen(str)-n;i++)
+    {
+        balance+=(isvowel(str[i-1])?-1:1);
+        balance+=(isvowel(str[i+n-1])?1:-1);
+        if(balance==0)
+            count++;
+    }
+    printf("%d",count);
+
+    return 0;
+}
