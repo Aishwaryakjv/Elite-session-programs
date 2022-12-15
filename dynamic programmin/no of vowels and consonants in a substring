@@ -1,0 +1,10 @@
+the program must print the no of substring values of length N in string which have equal count of vowels and consonants.
+note: value of N is always is even.
+
+i/p:
+havenhelljoysorrow
+
+o/p
+5
+
+have,aven,enhe,oyso,orro
