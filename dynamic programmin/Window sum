@@ -6,6 +6,8 @@ int k=4;
 o/p:
 3 4 3 5
 
+bcs sum of elements 3 4 3 5 is high than other sum values
+
 #include <stdio.h>
 
 int main()
